@@ -46,11 +46,11 @@ class CNN(nn.Module):
         # Convolution-Teil (Feature Extraction)
         self.conv = nn.Sequential(
 
-            nn.Conv2d(1, 16, kernel_size=3, padding=1), # (1,28,28) → (16,28,28)
+            nn.Conv2d(1, 16, kernel_size=3, padding=1), # (1,28,28) → (16,28,28) 16 filters are applied, means: 1 channel -> 16 channels
             nn.ReLU(),
-            nn.MaxPool2d(2),                            # → (16,14,14)
+            nn.MaxPool2d(2),                            # → (16,14,14) -> halves length of each feature dimension (not the filter dimension)
 
-            nn.Conv2d(16, 32, kernel_size=3, padding=1), # → (32,14,14)
+            nn.Conv2d(16, 32, kernel_size=3, padding=1), # → (32,14,14) 16 Filters are extended to 32 Filters
             nn.ReLU(),
             nn.MaxPool2d(2)                             # → (32,7,7)
         )
@@ -65,7 +65,7 @@ class CNN(nn.Module):
             nn.Linear(hidden_dim, 10)   # 10 Klassen (Ziffern 0–9)
         )
 
-    def forward(self, x):
+    def forward(self, x): #is called by itself if an object (e.g. model) of class CNN is called like e.g. model(images)
 
         x = self.conv(x) # Feature Extraction
         x = self.fc(x) # Klassifikation
