@@ -25,12 +25,13 @@ MODEL_PATH = "mnist_cnn.pth"
 # HYPERPARAMETER
 # -----------------------------
 HP = {
-    "learning_rate": 0.001352,
-    "hidden_dim":    135,
-    "dropout":       0.1736,
+    "learning_rate": 0.0013949782589804721,
+    "hidden_dim":    122,
+    "dropout":       0.15228880760712216,
     "batch_size":    128,
-    "epochs":        20,
+    "epochs":        15,
 }
+Affine_train=True #besseres Ergebnis, aber dauert länger zum trainieren
 
 # =====================================================
 # CNN MODELL
@@ -64,13 +65,27 @@ class CNN(nn.Module):
 # TRAINING
 # =====================================================
 def train_model(hp: dict):
-    transform = transforms.Compose([
+
+    test_transform= transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.5,), (0.5,))
     ])
 
-    train_dataset = datasets.MNIST(root="./data", train=True,  download=True, transform=transform)
-    test_dataset  = datasets.MNIST(root="./data", train=False, download=True, transform=transform)
+    if Affine_train==True:
+            train_transform = transforms.Compose([    transforms.RandomAffine(
+            degrees=10,            # Rotation
+            translate=(0.1,0.1),   # Verschiebung
+            scale=(0.9,1.1)        # Skalierung
+            ),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5,), (0.5,))
+            ])
+
+    else:
+        train_transform=test_transform
+
+    train_dataset = datasets.MNIST(root="./data", train=True,  download=True, transform=train_transform)
+    test_dataset  = datasets.MNIST(root="./data", train=False, download=True, transform=test_transform)
 
     train_loader = DataLoader(train_dataset, batch_size=hp["batch_size"], shuffle=True)
     test_loader  = DataLoader(test_dataset,  batch_size=hp["batch_size"])
@@ -98,6 +113,7 @@ def train_model(hp: dict):
     # Evaluation auf Testset
     model.eval()
     correct, total = 0, 0
+    wrong_numbers=[]
     with torch.no_grad():
         for images, labels in test_loader:
             images, labels = images.to(device), labels.to(device)
@@ -105,9 +121,16 @@ def train_model(hp: dict):
             _, predicted = torch.max(outputs, 1)
             total   += labels.size(0)
             correct += (predicted == labels).sum().item()
+            wrong_idx = torch.where(predicted != labels)[0]
+
+            for idx in wrong_idx:
+                wrong_numbers.append([predicted[idx].item(),labels[idx].item()])
+
 
     accuracy = 100 * correct / total
     print(f"\nTest Accuracy: {accuracy:.2f}%")
+    for n in wrong_numbers:
+        print("wrong numbers",n)
 
     # Modell + alle Hyperparameter speichern
     torch.save({"hyperparameters": hp, "state_dict": model.state_dict()}, MODEL_PATH)

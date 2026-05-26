@@ -1,0 +1,117 @@
+Device: cuda:0
+CUDA verf�gbar: True
+GPU: NVIDIA GeForce RTX 4070
+[I 2026-05-22 13:01:24,789] A new study created in memory with name: no-name-b4678d2a-bfd3-4d9a-a582-b310f2120dae
+Trial 0 | Epoch 1 | Loss: 1073.1802 | Accuracy: 41.53%
+Trial 0 | Epoch 2 | Loss: 1057.0094 | Accuracy: 53.67%
+Trial 0 | Epoch 3 | Loss: 1019.2130 | Accuracy: 61.73%
+Trial 0 | Epoch 4 | Loss: 905.9807 | Accuracy: 70.63%
+Trial 0 | Epoch 5 | Loss: 712.5564 | Accuracy: 80.64%
+[I 2026-05-22 13:02:23,060] Trial 0 finished with value: 80.64 and parameters: {'learning_rate': 0.0023693590395094323, 'batch_size': 128, 'hidden_dim': 123, 'dropout': 0.22708445361841054, 'optimizer': 'SGD'}. Best is trial 0 with value: 80.64.
+Trial 1 | Epoch 1 | Loss: 213.3162 | Accuracy: 97.93%
+Trial 1 | Epoch 2 | Loss: 83.7881 | Accuracy: 98.70%
+Trial 1 | Epoch 3 | Loss: 68.8061 | Accuracy: 98.85%
+Trial 1 | Epoch 4 | Loss: 56.2166 | Accuracy: 98.95%
+Trial 1 | Epoch 5 | Loss: 49.0022 | Accuracy: 98.83%
+[I 2026-05-22 13:04:06,569] Trial 1 finished with value: 98.83 and parameters: {'learning_rate': 0.0026750575672747625, 'batch_size': 128, 'hidden_dim': 98, 'dropout': 0.2622477060436138, 'optimizer': 'Adam'}. Best is trial 1 with value: 98.83.
+Trial 2 | Epoch 1 | Loss: 1074.8130 | Accuracy: 27.98%
+Trial 2 | Epoch 2 | Loss: 1058.2832 | Accuracy: 47.19%
+Trial 2 | Epoch 3 | Loss: 1014.8873 | Accuracy: 56.43%
+Trial 2 | Epoch 4 | Loss: 890.2699 | Accuracy: 68.47%
+Trial 2 | Epoch 5 | Loss: 707.8447 | Accuracy: 78.88%
+[I 2026-05-22 13:05:46,969] Trial 2 finished with value: 78.88 and parameters: {'learning_rate': 0.00288516104852322, 'batch_size': 128, 'hidden_dim': 95, 'dropout': 0.19433064200194064, 'optimizer': 'SGD'}. Best is trial 1 with value: 98.83.
+Trial 3 | Epoch 1 | Loss: 1072.9342 | Accuracy: 44.29%
+Trial 3 | Epoch 2 | Loss: 1052.8538 | Accuracy: 52.71%
+Trial 3 | Epoch 3 | Loss: 1001.5849 | Accuracy: 59.69%
+Trial 3 | Epoch 4 | Loss: 873.9855 | Accuracy: 69.05%
+Trial 3 | Epoch 5 | Loss: 698.9738 | Accuracy: 77.62%
+[I 2026-05-22 13:07:28,373] Trial 3 finished with value: 77.62 and parameters: {'learning_rate': 0.00210857614634304, 'batch_size': 128, 'hidden_dim': 131, 'dropout': 0.1939496618723784, 'optimizer': 'SGD'}. Best is trial 1 with value: 98.83.
+Trial 4 | Epoch 1 | Loss: 1074.8555 | Accuracy: 10.91%
+Trial 4 | Epoch 2 | Loss: 1062.2729 | Accuracy: 35.80%
+Trial 4 | Epoch 3 | Loss: 1039.5127 | Accuracy: 48.02%
+Trial 4 | Epoch 4 | Loss: 991.0579 | Accuracy: 58.38%
+Trial 4 | Epoch 5 | Loss: 890.5942 | Accuracy: 69.43%
+[I 2026-05-22 13:09:10,721] Trial 4 finished with value: 69.43 and parameters: {'learning_rate': 0.0017416747593508811, 'batch_size': 128, 'hidden_dim': 92, 'dropout': 0.2980427041283791, 'optimizer': 'SGD'}. Best is trial 1 with value: 98.83.
+Trial 5 | Epoch 1 | Loss: 1075.8455 | Accuracy: 14.18%
+[I 2026-05-22 13:09:31,634] Trial 5 pruned. 
+Trial 6 | Epoch 1 | Loss: 1071.3736 | Accuracy: 41.76%
+Trial 6 | Epoch 2 | Loss: 1032.8557 | Accuracy: 67.34%
+Trial 6 | Epoch 3 | Loss: 855.6381 | Accuracy: 77.85%
+Trial 6 | Epoch 4 | Loss: 595.3153 | Accuracy: 86.26%
+Trial 6 | Epoch 5 | Loss: 468.3838 | Accuracy: 89.87%
+[I 2026-05-22 13:11:11,479] Trial 6 finished with value: 89.87 and parameters: {'learning_rate': 0.0037268989669422734, 'batch_size': 128, 'hidden_dim': 85, 'dropout': 0.22463079787638052, 'optimizer': 'SGD'}. Best is trial 1 with value: 98.83.
+Trial 7 | Epoch 1 | Loss: 1067.6036 | Accuracy: 51.55%
+Trial 7 | Epoch 2 | Loss: 999.8962 | Accuracy: 59.44%
+Trial 7 | Epoch 3 | Loss: 773.6699 | Accuracy: 75.35%
+Trial 7 | Epoch 4 | Loss: 591.0656 | Accuracy: 82.31%
+Trial 7 | Epoch 5 | Loss: 503.6483 | Accuracy: 86.23%
+[I 2026-05-22 13:12:46,236] Trial 7 finished with value: 86.23 and parameters: {'learning_rate': 0.003735050591879791, 'batch_size': 128, 'hidden_dim': 80, 'dropout': 0.18428275414285372, 'optimizer': 'SGD'}. Best is trial 1 with value: 98.83.
+Trial 8 | Epoch 1 | Loss: 196.6895 | Accuracy: 97.76%
+Trial 8 | Epoch 2 | Loss: 63.1355 | Accuracy: 98.80%
+Trial 8 | Epoch 3 | Loss: 48.7645 | Accuracy: 98.89%
+Trial 8 | Epoch 4 | Loss: 42.3830 | Accuracy: 98.94%
+Trial 8 | Epoch 5 | Loss: 37.0718 | Accuracy: 99.15%
+[I 2026-05-22 13:14:23,105] Trial 8 finished with value: 99.15 and parameters: {'learning_rate': 0.002023833495975361, 'batch_size': 128, 'hidden_dim': 134, 'dropout': 0.15423905528206347, 'optimizer': 'Adam'}. Best is trial 8 with value: 99.15.
+Trial 9 | Epoch 1 | Loss: 177.6233 | Accuracy: 98.06%
+Trial 9 | Epoch 2 | Loss: 65.5603 | Accuracy: 98.73%
+Trial 9 | Epoch 3 | Loss: 50.8889 | Accuracy: 98.96%
+Trial 9 | Epoch 4 | Loss: 44.4319 | Accuracy: 98.96%
+Trial 9 | Epoch 5 | Loss: 38.6460 | Accuracy: 99.16%
+[I 2026-05-22 13:16:00,102] Trial 9 finished with value: 99.16 and parameters: {'learning_rate': 0.0022323181659943394, 'batch_size': 128, 'hidden_dim': 134, 'dropout': 0.26302062125747366, 'optimizer': 'Adam'}. Best is trial 9 with value: 99.16.
+Trial 10 | Epoch 1 | Loss: 258.8235 | Accuracy: 97.78%
+Trial 10 | Epoch 2 | Loss: 93.0155 | Accuracy: 98.45%
+Trial 10 | Epoch 3 | Loss: 72.5304 | Accuracy: 98.69%
+Trial 10 | Epoch 4 | Loss: 60.5612 | Accuracy: 98.77%
+Trial 10 | Epoch 5 | Loss: 52.4687 | Accuracy: 98.79%
+[I 2026-05-22 13:17:37,085] Trial 10 finished with value: 98.79 and parameters: {'learning_rate': 0.0011243180486944092, 'batch_size': 128, 'hidden_dim': 114, 'dropout': 0.2972828869004017, 'optimizer': 'Adam'}. Best is trial 9 with value: 99.16.
+Trial 11 | Epoch 1 | Loss: 202.9680 | Accuracy: 97.49%
+Trial 11 | Epoch 2 | Loss: 69.7429 | Accuracy: 98.63%
+Trial 11 | Epoch 3 | Loss: 54.6042 | Accuracy: 98.92%
+Trial 11 | Epoch 4 | Loss: 47.4658 | Accuracy: 98.89%
+Trial 11 | Epoch 5 | Loss: 40.4037 | Accuracy: 99.08%
+[I 2026-05-22 13:19:14,728] Trial 11 finished with value: 99.08 and parameters: {'learning_rate': 0.0015521867626220912, 'batch_size': 128, 'hidden_dim': 139, 'dropout': 0.25749029427903086, 'optimizer': 'Adam'}. Best is trial 9 with value: 99.16.
+Trial 12 | Epoch 1 | Loss: 203.9152 | Accuracy: 98.14%
+Trial 12 | Epoch 2 | Loss: 66.6056 | Accuracy: 98.84%
+Trial 12 | Epoch 3 | Loss: 51.6215 | Accuracy: 98.79%
+Trial 12 | Epoch 4 | Loss: 42.7261 | Accuracy: 99.20%
+Trial 12 | Epoch 5 | Loss: 39.1393 | Accuracy: 99.20%
+[I 2026-05-22 13:20:53,615] Trial 12 finished with value: 99.2 and parameters: {'learning_rate': 0.0013949782589804721, 'batch_size': 128, 'hidden_dim': 122, 'dropout': 0.15228880760712216, 'optimizer': 'Adam'}. Best is trial 12 with value: 99.2.
+Trial 13 | Epoch 1 | Loss: 249.7062 | Accuracy: 97.79%
+Trial 13 | Epoch 2 | Loss: 84.7747 | Accuracy: 98.54%
+Trial 13 | Epoch 3 | Loss: 66.1221 | Accuracy: 98.72%
+Trial 13 | Epoch 4 | Loss: 54.4633 | Accuracy: 98.82%
+Trial 13 | Epoch 5 | Loss: 50.4013 | Accuracy: 98.95%
+[I 2026-05-22 13:22:30,397] Trial 13 finished with value: 98.95 and parameters: {'learning_rate': 0.0012732751404804434, 'batch_size': 128, 'hidden_dim': 121, 'dropout': 0.2584732465805686, 'optimizer': 'Adam'}. Best is trial 12 with value: 99.2.
+Trial 14 | Epoch 1 | Loss: 216.1884 | Accuracy: 98.14%
+Trial 14 | Epoch 2 | Loss: 70.7855 | Accuracy: 98.41%
+[I 2026-05-22 13:23:09,073] Trial 14 pruned. 
+Trial 15 | Epoch 1 | Loss: 272.5994 | Accuracy: 97.72%
+Trial 15 | Epoch 2 | Loss: 92.5556 | Accuracy: 98.23%
+[I 2026-05-22 13:23:47,864] Trial 15 pruned. 
+Trial 16 | Epoch 1 | Loss: 200.5470 | Accuracy: 98.21%
+Trial 16 | Epoch 2 | Loss: 72.5254 | Accuracy: 98.73%
+Trial 16 | Epoch 3 | Loss: 58.2480 | Accuracy: 98.92%
+Trial 16 | Epoch 4 | Loss: 48.5125 | Accuracy: 98.95%
+Trial 16 | Epoch 5 | Loss: 43.2789 | Accuracy: 99.06%
+[I 2026-05-22 13:25:25,001] Trial 16 finished with value: 99.06 and parameters: {'learning_rate': 0.0016899062449032961, 'batch_size': 128, 'hidden_dim': 116, 'dropout': 0.23820837442528744, 'optimizer': 'Adam'}. Best is trial 12 with value: 99.2.
+Trial 17 | Epoch 1 | Loss: 242.2378 | Accuracy: 97.90%
+Trial 17 | Epoch 2 | Loss: 81.5735 | Accuracy: 98.47%
+[I 2026-05-22 13:26:03,797] Trial 17 pruned. 
+Trial 18 | Epoch 1 | Loss: 155.3062 | Accuracy: 98.00%
+Trial 18 | Epoch 2 | Loss: 56.8059 | Accuracy: 98.77%
+Trial 18 | Epoch 3 | Loss: 46.2135 | Accuracy: 98.88%
+Trial 18 | Epoch 4 | Loss: 39.9240 | Accuracy: 99.06%
+Trial 18 | Epoch 5 | Loss: 36.3684 | Accuracy: 99.14%
+[I 2026-05-22 13:27:42,546] Trial 18 finished with value: 99.14 and parameters: {'learning_rate': 0.0031003643062547173, 'batch_size': 128, 'hidden_dim': 139, 'dropout': 0.17293693358649218, 'optimizer': 'Adam'}. Best is trial 12 with value: 99.2.
+Trial 19 | Epoch 1 | Loss: 202.1271 | Accuracy: 98.08%
+Trial 19 | Epoch 2 | Loss: 72.4316 | Accuracy: 98.66%
+Trial 19 | Epoch 3 | Loss: 55.8645 | Accuracy: 99.07%
+Trial 19 | Epoch 4 | Loss: 45.7614 | Accuracy: 99.09%
+Trial 19 | Epoch 5 | Loss: 42.6505 | Accuracy: 98.99%
+
+Beste Hyperparameter:
+[I 2026-05-22 13:28:49,958] Trial 19 finished with value: 98.99 and parameters: {'learning_rate': 0.0018540980039306093, 'batch_size': 128, 'hidden_dim': 104, 'dropout': 0.20932896407237472, 'optimizer': 'Adam'}. Best is trial 12 with value: 99.2.
+{'learning_rate': 0.0013949782589804721, 'batch_size': 128, 'hidden_dim': 122, 'dropout': 0.15228880760712216, 'optimizer': 'Adam'}
+
+Beste Accuracy:
+99.2

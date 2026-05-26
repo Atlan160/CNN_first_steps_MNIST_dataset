@@ -13,7 +13,7 @@ import optuna
 # =====================================================
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
+Affine_train=True
 print("Device:", device)
 print("CUDA verfügbar:", torch.cuda.is_available())
 
@@ -33,10 +33,24 @@ CONFIG = {
 # TRANSFORMS
 # =====================================================
 
-transform = transforms.Compose([
+
+test_transform= transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
 ])
+
+if Affine_train==True:
+        train_transform = transforms.Compose([    transforms.RandomAffine(
+        degrees=10,            # Rotation
+        translate=(0.1,0.1),   # Verschiebung
+        scale=(0.9,1.1)        # Skalierung
+        ),
+        transforms.ToTensor(),
+        transforms.Normalize((0.5,), (0.5,))
+        ])
+
+else:
+    train_transform=test_transform
 
 # =====================================================
 # DATASETS
@@ -46,14 +60,14 @@ train_dataset = datasets.MNIST(
     root="./data",
     train=True,
     download=True,
-    transform=transform
+    transform=train_transform
 )
 
 test_dataset = datasets.MNIST(
     root="./data",
     train=False,
     download=True,
-    transform=transform
+    transform=test_transform
 )
 
 # =====================================================
@@ -167,26 +181,26 @@ def objective(trial):
 
     learning_rate = trial.suggest_float(
         "learning_rate",
-        1e-5,
-        1e-2,
+        1e-3,
+        4e-3,
         log=True
     )
 
     batch_size = trial.suggest_categorical(
         "batch_size",
-        [32, 64, 128]
+        [128]
     )
 
     hidden_dim = trial.suggest_int(
         "hidden_dim",
-        64,
-        256
+        80,
+        140
     )
 
     dropout = trial.suggest_float(
         "dropout",
-        0.1,
-        0.5
+        0.15,
+        0.3
     )
 
     optimizer_name = trial.suggest_categorical(
